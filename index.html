@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- FontAwsem -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- custmized css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To Do List</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <nav class="navbar navbar-expand-lg" id="navbar-example">
+      <div class="container">
+        <a
+          class="navbar-brand text-primary ff-playwrite fs-2 fw-bolder"
+          href="#"
+          >ToDo</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse ms-lg-4"
+          id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-4 my-3 my-lg-0">
+              <a class="nav-link px-4 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item mx-4 my-3 my-lg-0">
+              <a class="nav-link px-4" href="#">Link</a>
+            </li>
+            <li class="nav-item mx-4 my-3 my-lg-0">
+              <a class="nav-link px-4" href="#">Link</a>
+            </li>
+            <li class="nav-item mx-4 my-3 my-lg-0">
+              <a class="nav-link px-4" href="#">Link</a>
+            </li>
+            <li class="nav-item mx-4 my-3 my-lg-0 dropdown">
+              <a
+                class="nav-link px-4 dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul> -->
+          <form class="d-flex ms-auto" role="search">
+            <input
+              class="form-control me-2 bg-transparent text-white"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search" />
+            <button class="btn btn-outline-primary ff-playwrite" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- home -->
+    <section class="container mt-5 pt-3">
+      <div class="row text-center">
+        <div class="col d-flex flex-column align-items-center">
+          <h1 class="text-primary ff-playwrite">
+            Add <span class="ff-shadows">TO DO</span>
+          </h1>
+          <form class="todo-form position-relative w-75">
+            <input
+              class="form-control todoInput bg-transparent rounded-pill text-white"
+              type="text"
+              name="ToDo"
+              value=""
+              placeholder="Write Your ToDo Here......" />
+
+            <div class="d-flex align-items-center justify-content-around mt-4">
+              <label class="text-primary fs-3 ff-shadows">Select Date: </label>
+
+              <div class="select-date">
+                <label class="text-success fs-5" for="today">Today</label>
+                <input type="checkbox" id="today" />
+
+                <label class="ms-5 fs-5 text-success" for="tomorrow"
+                  >Tomorrow</label
+                >
+                <input type="checkbox" id="tomorrow" />
+              </div>
+              <!-- <input
+                class="form-control w-25 rounded-4 mt-4 bg-transparent text-white"
+                id="date"
+                type="date"
+              /> -->
+            </div>
+
+            <!-- <div class="mt-4">
+              <label class="text-success fs-3" for="codeing">Coding</label>
+              <input class="me-4" id="coding" type="radio" />
+              <label class="text-success fs-3" for="lang">lang</label>
+              <input id="lang" type="radio" />
+            </div> -->
+
+            <button
+              class="addBtn btn btn-outline-primary ff-shadows fs-3 fw-bold rounded-pill px-5 py-0 position-absolute"
+              type="button">
+              ADD
+            </button>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="row mt-5 flex-wrap justify-content-between g-2">
+        <div class="col-12 col-md-6" id="todayTodo">
+          <div class="container">
+            <div class="today-heading d-flex justify-content-between mb-3 pe-1">
+              <input type="checkbox" name="selectedAll" id="selectedAllToday" />
+              <h3 class="text-primary">Today</h3>
+            </div>
+            <div class="todo-content" id="todayList">
+              <!-- <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center shadow-lg border rounded-2 border-danger px-1">
+                <p class="text-white mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div> -->
+            </div>
+            <div class="today-btns mt-4">
+              <button class="btn btn-danger" disabled>Delete All</button>
+              <button class="btn btn-success" disabled>
+                Mark All Complete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" id="tomorrowTodo">
+          <div class="container">
+            <div
+              class="tomorrow-heading d-flex justify-content-between mb-3 pe-1">
+              <input
+                type="checkbox"
+                name="selectedAll"
+                id="selectedAllTomorrow" />
+              <h3 class="text-primary">Tomorrow</h3>
+            </div>
+            <div class="todo-content" id="tomorrowList">
+              <!-- <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div>
+              <div
+                class="todo d-flex justify-content-between align-items-center bg-info shadow-lg border rounded-2 px-1">
+                <p class="text-dark mt-3">
+                  - Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <div class="icons">
+                  <i class="fa fa-trash text-danger me-3"></i>
+                  <input type="checkbox" name="todayToDo" id="todayToDo-" />
+                </div>
+              </div> -->
+            </div>
+            <div class="tomorrow-btns mt-4">
+              <button class="btn btn-danger" disabled>Delete All</button>
+              <button class="btn btn-success" disabled>
+                Mark All Complete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

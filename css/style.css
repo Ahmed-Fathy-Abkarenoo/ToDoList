@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #03506f;
+  height: 1000px;
+}
+
+:root {
+  --data-ff-one: "Playwrite IS";
+  --data-ff-two: "Shadows Into Light";
+}
+/* -------------------gloable classses--------------------- */
+
+.ff-playwrite {
+  font-family: var(--data-ff-one);
+}
+.ff-shadows {
+  font-family: var(--data-ff-two);
+}
+
+::placeholder {
+  color: rgba(245, 222, 179, 0.38) !important;
+  font-size: 18px;
+}
+
+.form-control:focus {
+  border-color: #29c7ac;
+  box-shadow: 0 0 0 0.25rem #29c7ad3d !important;
+}
+hr {
+  color: limegreen;
+}
+/* ------------------------------------------------- */
+.nav-link {
+  position: relative;
+  color: wheat;
+  border: 2px dashed dimgray;
+  border-radius: 20px;
+  font-family: var(--data-ff-two);
+  font-size: 20px;
+}
+
+.nav-link.active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #29c7ac !important;
+  border-style: solid;
+  border-width: 1px;
+}
+.navbar .btn {
+  letter-spacing: 3px;
+}
+/* ------------------------------------------------------ */
+
+h1 {
+  font-size: 50px;
+}
+
+.addBtn {
+  letter-spacing: 3px;
+  top: 6px;
+  right: 6px;
+}
+.todo-form .form-control {
+  padding: 15px;
+}
+
+.today-heading,
+.tomorrow-heading {
+  position: relative;
+}
+
+.today-heading:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #29c7ac;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.tomorrow-heading::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #29c7ac;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.todo-content {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.icons i {
+  cursor: pointer;
+}
